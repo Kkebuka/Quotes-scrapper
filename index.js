@@ -30,9 +30,8 @@ const getQuotes = async () => {
 
         })
         allQuotes.push(...quotesOnPage);
-        // console.log(allQuotes);
 
-        // await page.waitForNavigation();
+    
         await page.screenshot({path: `qoute${pageNumber}.png`})
         const nextPageButton = await page.$(".pager > .next > a");
 
